@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #292929;
+    background: #fff;
+    font-family: Georgia, serif;
+}
+
+.hero {
+    display: grid; /* Places the image and text in a flexible layout. */
+    grid-template-columns: 2fr 3fr; /* Gives the image 40% and the text 60% of the space. */
+    gap: 5vw; /* Adds space between the image and the text. */
+    align-items: center; /* Keeps the image and text aligned in the middle. */
+    max-width: 900px;
+    min-height: 100vh;
+    margin: auto; /* Centers the layout on the page. */
+    padding: 50px;
+}
+
+.hero-image {
+    display: block;
+    width: min(100%, 420px); /* Keeps the image from becoming too wide. */
+    aspect-ratio: 4 / 5;
+    overflow: hidden; /* Hides any part of the image outside the shape. */
+    border-radius: 50%;
+}
+
+.hero-image:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fills the shape while keeping the image proportions. */
+}
+
+.intro h1 {
+    margin: 0 0 16px;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.tagline {
+    margin: -6px 0 12px !important;
+    font-size: 1.1rem !important;
+    font-style: italic;
+    line-height: 1.2 !important;
+}
+
+.home-page > a.subtitle {
+    color: inherit;
+    font-size: 0.95rem;
+}
+
+.home-page .subtitle {
+    color: inherit;
+}
+
+.home-page .subtitle a {
+    color: inherit;
+}
+
+.home-page > p {
+    font-size: 0.9rem;
+}
+
+.intro p {
+    margin: 4px 0 18px;
+    font-size: 0.95rem;
+    line-height: 1.35;
+}
+
+.page-content h2 {
+    font-size: 1.25rem; /* rem uses the browser's normal text size; this makes the heading slightly larger. */
+}
+
+.page-content p {
+    font-size: 0.95rem;
+    line-height: 1.35;
+    text-align: left; /* Makes the text align evenly on both sides. */
+}
+.page-content ul {
+    max-width: 390px;
+    margin: 10px 0 22px;
+    padding-left: 0;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    list-style-position: inside;
+    text-align: left;
+}
+
+.page-content .work-list {
+    max-width: 430px;
+    margin: 14px auto 22px;
+    padding-left: 18px;
+    list-style-position: outside;
+}
+
+.work-list li {
+    margin-bottom: 10px;
+}
+
+.page-content img {
+    display: block; /* Prevents extra space below the image. */
+    width: 80%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 14px;
+}
+
+.danube-gallery {
+    display: grid;
+    grid-template-columns: 2.5fr repeat(3, 1fr);
+    align-items: center;
+    gap: 8px;
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto 14px;
+}
+
+.danube-gallery img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 3px;
+}
+
+.danube-gallery img:first-child {
+    width: 100%;
+    height: auto;
+}
+
+.danube-gallery .danube-wide {
+    aspect-ratio: 320 / 162;
+    object-fit: contain;
+}
+
+.work-page p,
+.work-page li {
+    font-size: 0.88rem;
+}
+
+.work-page p {
+    margin-bottom: 10px;
+}
+
+.work-page .danube-description {
+    margin-bottom: 2px;
+}
+
+.work-page .source-reference {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 0.72rem;
+    line-height: 1.25;
+}
+
+.work-page .source-reference a {
+    color: inherit;
+}
+
+.about-page p,
+.work-page p {
+    max-width: 430px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.45;
+}
+
+.work-page .work-list {
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.work-page .work-list li {
+    margin-bottom: 5px;
+}
+
+.section-divider {
+    border: 0;
+    border-top: 1px solid #d9d9d9;
+    width: 46%;
+    margin: 16px auto;
+}
+
+.home-divider {
+    border: 0;
+    border-top: 1px solid #d9d9d9;
+    width: 46%;
+    margin: 16px auto;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.links a {
+    color: inherit;
+    font-size: .9rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 4px 0 22px;
+}
+
+.home-page > a.subtitle {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.home-page > p:first-of-type {
+    margin: 0 0 16px;
+}
+
+.home-page > p:nth-of-type(2) {
+    margin: 0 0 12px;
+}
+
+.home-page > p:nth-of-type(3) {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.home-page .social-links {
+    margin-top: 12px;
+}
+
+.social-links a {
+    color: inherit;
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    transition: transform 0.2s ease;
+}
+
+.social-links .linktree-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.social-links .linktree-icon img {
+    width: 89px;
+    max-width: none;
+    height: 18px;
+    margin: 0;
+    position: absolute;
+    left: -75px;
+    top: 0;
+}
+
+.social-links a:hover svg,
+.social-links a:focus-visible svg {
+    transform: scale(1.15);
+}
+
+.social-links a:hover .linktree-icon,
+.social-links a:focus-visible .linktree-icon {
+    transform: scale(1.15);
+}
+
+@media (max-width: 600px) {
+    /* Stacks the image and text on smaller screens. */
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 35px 25px;
+    }
+
+    .hero-image {
+        width: min(100%, 360px);
+        margin: auto;
+    }
+
+    .danube-gallery {
+        max-width: 320px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .danube-gallery .danube-wide {
+        grid-column: 1 / -1;
+        aspect-ratio: 320 / 162;
+    }
+}
