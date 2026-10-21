@@ -11,7 +11,7 @@ body {
 
 .hero {
     display: grid; /* Places the image and text in a flexible layout. */
-    grid-template-columns: 2fr 3fr; /* Gives the image 40% and the text 60% of the space. */
+    grid-template-columns: 3fr 4fr; /* Gives the image a little more room while keeping the text wider. */
     gap: 5vw; /* Adds space between the image and the text. */
     align-items: center; /* Keeps the image and text aligned in the middle. */
     max-width: 900px;
@@ -22,10 +22,10 @@ body {
 
 .hero-image {
     display: block;
-    width: min(100%, 420px); /* Keeps the image from becoming too wide. */
+    width: min(100%, 460px); /* Keeps the image from becoming too wide. */
     aspect-ratio: 4 / 5;
     overflow: hidden; /* Hides any part of the image outside the shape. */
-    border-radius: 50%;
+    border-radius: 42% 58% 63% 37% / 38% 44% 56% 62%;
 }
 
 .hero-image:focus-visible {
@@ -300,7 +300,7 @@ body {
     }
 
     .hero-image {
-        width: min(100%, 360px);
+        width: min(100%, 390px);
         margin: auto;
     }
 
